@@ -13,6 +13,14 @@ export default class Followers extends Component {
         order: 'asc',
     };
 
+    headRows = [
+        { id: 'id', label: 'ID' },
+        { id: 'name', label: 'Name', sortable: true },
+        { id: 'screen_name', label: 'Screen Name', sortable: true },
+        { id: 'description', label: 'Description' },
+        { id: 'location', label: 'Location' },
+    ];
+
     getFollowers = async (cursor = -1) => {
         const { order, orderBy } = this.state;
         const { match: { params: { id } } } = this.props;
@@ -52,14 +60,6 @@ export default class Followers extends Component {
     render() {
         const { isLoading, count, followers, page, order, orderBy } = this.state;
 
-        const headRows = [
-            { id: 'id', label: 'ID' },
-            { id: 'name', label: 'Name', sortable: true },
-            { id: 'screen_name', label: 'Screen Name', sortable: true },
-            { id: 'description', label: 'Description' },
-            { id: 'location', label: 'Location' },
-        ];
-
         return (
             <div>
                 <Fab color="primary" aria-label="Add" size='small'>
@@ -67,7 +67,7 @@ export default class Followers extends Component {
                 </Fab>
                 <EnhancedTable
                     title="Followers"
-                    rows={headRows}
+                    rows={this.headRows}
                     data={followers}
                     totalCount={count}
                     page={page}
