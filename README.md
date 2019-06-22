@@ -1,7 +1,6 @@
 This project is a home craft for Chegg
 
-Frontend was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-With eject
+Frontend was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with eject
 
 ## Available Scripts
 
@@ -15,8 +14,8 @@ Runs the app on [http://localhost:3000](http://localhost:3000)<br>
 
 ### `npm run test fronend`
 
-Actually no tests where implemented
+Actually no tests where implemented :-(
 
 ### `npm run build fronend`
 
-Builds frontend build bundles
+Builds frontend production bundles :-)
